@@ -223,7 +223,10 @@ def test_clone_preserves_existing_template_on_failure(mocker, clone_dir) -> None
             subprocess.CalledProcessError(
                 -1,
                 'cmd',
-                output=b"fatal: repository 'https://github.com/hackebro/cookiedozer' not found",
+                output=(
+                    b"fatal: repository 'https://github.com/hackebro/cookiedozer'"
+                    b" not found"
+                ),
             )
         ],
     )
